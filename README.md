@@ -1,5 +1,6 @@
 1. Project Structure and Setup
 Project Structure:
+
   ├── tests/
 │   ├── test_user_journey.py
 │   ├── conftest.py
@@ -14,7 +15,7 @@ Project Structure:
 ├── pytest.ini
 ├── README.md
 
-2. Design Patterns Used
+3. Design Patterns Used
 Page Object Model (POM):
 
 Each web page is represented by a class in the pages directory. This encapsulates elements and actions that can be performed on the page, promoting reusability and maintainability.
