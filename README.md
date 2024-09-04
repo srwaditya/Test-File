@@ -1,7 +1,7 @@
 1. Project Structure and Setup
 Project Structure:
 
-  ├── tests/
+├── tests/
 │   ├── test_user_journey.py
 │   ├── conftest.py
 ├── pages/
