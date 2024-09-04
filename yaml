@@ -1,0 +1,21 @@
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Build Docker image
+        run: docker build -t selenium-test .
+
+      - name: Run tests
+        run: docker run --rm -v ${{ github.workspace }}/reports:/app/reports selenium-test
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v2
+        with:
+          name: test_report
+          path: reports/test_report.html
